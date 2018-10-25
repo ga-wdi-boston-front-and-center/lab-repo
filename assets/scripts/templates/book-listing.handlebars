@@ -1,0 +1,19 @@
+{{#each books as |book|}}
+  {{log book}}
+  {{> partial}}
+  <!-- Don't uncomment yet -->
+
+  <div>
+    <section data-id="{{book.id}}">
+    <h1 data-id="{{book.id}}"> <small>Title: {{limit book.title 10}}</small></h1>
+    {{#if book.author}}
+      {{book.author}}
+    {{else}}
+      No author provided.
+    {{/if}}
+    <br />
+    <button type="submit" class="btn btn-default">Delete this book</button>
+    </section>
+  </div>
+
+{{/each}}
