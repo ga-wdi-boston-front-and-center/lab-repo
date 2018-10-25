@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>WDI Library</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -12,6 +12,34 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-      <h1>Browser Template</h1>
+      <h1>WDI Library</h1>
+      <h2>Get All Books</h2>
+        <form id="get-books">
+          <input type="submit" value="Get All Books" class="btn btn-default" />
+        </form>
+        <h2>Get One Book</h2>
+        <form id="get-one-book">
+          <input required type="text" name="book[id]" placeholder="ID" />
+          <input type="submit" value="Get One Book" class="btn btn-default" />
+        </form>
+        <h2>Delete A Book</h2>
+        <form id="delete">
+          <input required type="text" name="book[id]" placeholder="ID" />
+          <input type="submit" value="Delete A Book" class="btn btn-default" />
+        </form>
+        <h2>Update A Book</h2>
+        <form id="update">
+            <input required type="text" name="book[id]" placeholder="ID" /><br />
+            <input required type="text" name="book[title]" placeholder="Title" /><br />
+            <input required type="text" name="book[author]" placeholder="Author" /><br />
+            <input type="submit" value="Update A Book" class="btn btn-default" />
+        </form>
+        <h2>Create A Book</h2>
+        <form id="create">
+          <input required type="text" name="book[title]" placeholder="Title" /><br />
+          <input required type="text" name="book[author]" placeholder="Author" /><br />
+          <input type="submit" value="Create A Book" class="btn btn-default" />
+        </form>
+        <div id="content"></div>
     </body>
 </html>
